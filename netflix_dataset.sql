@@ -90,7 +90,7 @@ FROM netflix_dataset;
 
 --Analyze how the release date of a movie or TV show affects its viewership by comparing the total hours viewed for content released in different months or seasons
 SELECT
-    EXTRACT (MONTH FROM release_date) AS release_month,
+    EXTRACT(MONTH FROM release_date) AS release_month,
     SUM(hours_viewed) AS total_hours_viewed
 FROM netflix_dataset
 GROUP BY EXTRACT(MONTH FROM release_date)
@@ -98,7 +98,7 @@ ORDER BY total_hours_viewed DESC;
 
 --Analyze how the release date of a movie affects its viewership by comparing the total hours viewed for movies released in different months or seasons.    
 SELECT 
-    EXTRACT (DAY FROM release_date) AS release_day,
+    EXTRACT(DAY FROM release_date) AS release_day,
     SUM(hours_viewed) AS total_hours_viewed
 FROM netflix_dataset  
 GROUP BY EXTRACT(DAY FROM release_date)
