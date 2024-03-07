@@ -53,7 +53,9 @@ SELECT
     category,
     COUNT(*) AS total_releases
 FROM country_list
-GROUP BY country_name, category;
+GROUP BY 
+   country_name, 
+   category;
 
 --Analyze most-watched shows and movies based on 'hours_viewed'column
 SELECT 
